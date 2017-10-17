@@ -68,7 +68,7 @@ for ( i = 0; i < m; i++ )
         if (min > myArray[i][j])
         {
         	min = myArray[i][j];
-        };
+        }
         
     }
 }
