@@ -8,8 +8,8 @@
 
 int main(int argc, char *argv[])
 {
-int m = rand()%10 + 4;
-int n = rand()%10 + 5;
+int m = 4;//rand()%10 + 4;
+int n = 5;//rand()%10 + 5;
 int i, j;
 int myArray[m][n];
 srand(5);
@@ -107,6 +107,29 @@ printf( "Task 3:\n" );
     }
     printf( "\n" );
   }
-//____________________________________________ 
-  return 0;
+
+
+  int w, e;
+  printf( "Enter the number of columns in the matrix\n" );
+  w=l;
+  scanf("&i", e);
+  int myArray2[w][e];
+
+  for ( i = 0; i < w; i++ )
+  {
+    for ( j = 0; j < e; j++ )
+    {
+        scanf( "&i ", myArray2[i][j] );
+    }
+  }
+  printf( "Task 4:\n" );
+  for ( i = 0; i < w; i++ )
+  {
+    for ( j = 0; j < e; j++ )
+    {
+        printf( "[%d][%d]=%d ", i, j, myArray2[i][j] );
+    }
+    printf( "\n" );
+  }  
+return 0;
 }
