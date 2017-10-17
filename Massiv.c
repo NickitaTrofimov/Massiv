@@ -12,7 +12,6 @@ int m = rand()%10 + 4;
 int n = rand()%10 + 5;
 int i, j;
 int myArray[m][n];
-//____________________________________________
 srand(5);
 for ( i = 0; i < m; i++ )
 {
@@ -29,7 +28,7 @@ for ( i = 0; i < m; i++ )
     printf( "\n" );
 }
 printf( "\n" );
-//____________________________________________
+
 int cup;
 for ( j = 0; j < n; j++ )
 	{
@@ -37,19 +36,18 @@ for ( j = 0; j < n; j++ )
 	myArray[0][j] = myArray[m-1][j];
 	myArray[m-1][j] = cup;
 	}
-//Зеркальное отображение элементов (не работает)	
-//for ( j = 0; j < n; j++ )
-//	{
-//	cup = myArray[0][j];
-//	myArray[0][j] = myArray[0][n-1-j];
-//	myArray[0][n-1-j] = cup;
-//	}
-//for ( j = 0; j < n; j++ )
-//	{
-//	cup = myArray[m-1][j];
-//	myArray[m-1][j] = myArray[m-1][n-1-j];
-//	myArray[m-1][n-1-j] = cup;
-//	}
+for ( j = 0; j < (n/2); j++ )
+	{
+	cup = myArray[0][j];
+	myArray[0][j] = myArray[0][n-1-j];
+	myArray[0][n-1-j] = cup;
+	}
+for ( j = 0; j < (n/2); j++ )
+	{
+	cup = myArray[m-1][j];
+	myArray[m-1][j] = myArray[m-1][n-1-j];
+	myArray[m-1][n-1-j] = cup;
+	}
 printf( "Task 2:\n" );
   for ( i = 0; i < m; i++ )
   {
@@ -60,7 +58,9 @@ printf( "Task 2:\n" );
     printf( "\n" );
   }
 //____________________________________________
-int min = myArray[0][0] 
+int min = myArray[0][0];
+int I = 0;
+int J = 0;
 for ( i = 0; i < m; i++ )
 {
     for ( j = 0; j < n; j++ )
@@ -68,10 +68,13 @@ for ( i = 0; i < m; i++ )
         if (min > myArray[i][j])
         {
         	min = myArray[i][j];
+        	I=i;
+        	J=j;
         }
-        
     }
 }
+
+
 printf("%d", min);
   return 0;
 }
