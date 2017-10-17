@@ -73,8 +73,40 @@ for ( i = 0; i < m; i++ )
         }
     }
 }
-
-
-printf("%d", min);
+int k = m-1;
+int l = n-1;
+int myArray1[k][l];
+for (i = 0; i < k; i++)
+            {
+                for (j = 0; j < l; j++)
+                {
+                    if (i >= I && j >= J)
+                    {
+                        myArray1[i][j] = myArray[i+1][j+1];
+                    }
+                    else if (i >= I && j < J)
+                    {
+                        myArray1[i][j] = myArray[i+1][j];
+                    }
+                    else if (i < I && j >= J)
+                    {
+                        myArray1[i][j+1] = myArray[i][j+1];
+                    }
+                    else
+                    {
+                        myArray1[i][j] = myArray[i][j];
+                    }
+                }
+            }
+printf( "Task 3:\n" );
+  for ( i = 0; i < k; i++ )
+  {
+    for ( j = 0; j < l; j++ )
+    {
+        printf( "[%d][%d]=%d ", i, j, myArray1[i][j] );
+    }
+    printf( "\n" );
+  }
+//____________________________________________ 
   return 0;
 }
