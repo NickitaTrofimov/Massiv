@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	
-//Random matrix formation
+/*Random matrix formation*/
 	
 int m = rand()%10 + 4;
 int n = rand()%10 + 5;
@@ -34,7 +34,7 @@ for ( i = 0; i < m; i++ )
 }
 printf( "\n" );
 
-//Replacement of the first and last lines
+/*Replacement of the first and last lines*/
 	
 int cup;
 for ( j = 0; j < n; j++ )
@@ -44,7 +44,7 @@ for ( j = 0; j < n; j++ )
 	myArray[m-1][j] = cup;
 	}
 
-//their mirroring
+/*their mirroring*/
 	
 for ( j = 0; j < (n/2); j++ )
 	{
@@ -70,7 +70,7 @@ printf( "Task 2:\n" );
     printf( "\n" );
   }
 	
-//Finding the smallest element
+/*Finding the smallest element*/
 	
 int min = myArray[0][0];
 int I = 0;
@@ -88,7 +88,7 @@ for ( i = 0; i < m; i++ )
     }
 }
 
-//Finding its minor
+/*Finding its minor*/
 	
 int k = m-1;
 int l = n-1;
@@ -126,7 +126,7 @@ printf( "Task 3:\n" );
     printf( "\n" );
   }
 
-//Enter an arbitrary array
+/*Enter an arbitrary array*/
 
   int w, e;
   printf( "Enter the number of columns in the matrix\n" );
@@ -153,7 +153,7 @@ printf( "Task 3:\n" );
     printf( "\n" );
   }
 	
-  //Multiplication of our matrices
+  /*Multiplication of our matrices*/
 
 int myArray3[k][e];
 int z;
