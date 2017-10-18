@@ -112,14 +112,14 @@ printf( "Task 3:\n" );
   int w, e;
   printf( "Enter the number of columns in the matrix\n" );
   w=l;
-  scanf("&i", e);
+  scanf("%i", &e);
   int myArray2[w][e];
 
   for ( i = 0; i < w; i++ )
   {
     for ( j = 0; j < e; j++ )
     {
-        scanf( "&i ", myArray2[i][j] );
+        scanf( "%i ", &myArray2[i][j] );
     }
   }
   printf( "Task 4:\n" );
